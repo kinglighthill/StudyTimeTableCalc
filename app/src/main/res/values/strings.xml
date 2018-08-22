@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">"StudyTimeTableCalc "</string>
+    <string name="button1">"GENERATE STUDY TIMETABLE"</string>
+    <string name="button2">"MY STUDY TIMETABLE"</string>
+    <string name="help">"Help"</string>
+    <string name="setting">"Change Password"</string>
+    <string name="save">"SAVE"</string>
+    <string name="text_view1">"NUMBER OF COURSES"</string>
+    <string name="edit_text_view1">"Input number of courses"</string>
+    <string name="text_view2">"NUMBER OF READING DAYS"</string>
+    <string name="edit_text_view2">"Input number of reading days"</string>
+    <string name="text_view3">INPUT COURSES AND THEIR PRIORITY</string>
+    <string name="text_view4">INPUT NUMBER OF HOURS TO READ FOR EACH DAY</string>
+    <string name="edit_text_view3">"Input course"</string>
+    <string name="edit_text_view4">"Input priority"</string>
+    <string name="edit_text_view5">"Input day"</string>
+    <string name="edit_text_view6">"Input hours"</string>
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+</resources>
