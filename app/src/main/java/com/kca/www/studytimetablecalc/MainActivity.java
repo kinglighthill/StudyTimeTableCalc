@@ -1,13 +1,18 @@
 package com.kca.www.studytimetablecalc;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import static android.R.attr.start;
 
@@ -44,9 +49,23 @@ public class MainActivity extends AppCompatActivity {
             case R.id.help:
                 return  true;
             case R.id.setting:
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.add(R.id.change_password_placeholder,new Change_Password());
-                transaction.commit();
+                LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+                View messageView = inflater.inflate(R.layout.fragment_change__password, null);
+                final AlertDialog.Builder messageAlertBuilder = new AlertDialog.Builder(this);
+                messageAlertBuilder.setView(messageView);
+                messageAlertBuilder.setPositiveButton("Send", null)
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                final AlertDialog messageAlertDialog = messageAlertBuilder.create();
+                messageAlertDialog.show();
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                transaction.add(R.id.change_password_placeholder, new Change_Password());
+//                transaction.commit();
                 //Intent settingIntent = new Intent(this,change_password.getClass());
                 //startActivity(settingIntent);
                 return  true;
