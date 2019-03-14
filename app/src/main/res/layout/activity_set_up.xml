@@ -1,157 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_set_up"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.kca.www.studytimetablecalc.SetUpActivity">
-
+    android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/activity_set_up"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linear_layout1"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/text_view1"
-            android:gravity="center_vertical"
-            android:layout_weight="9"
-            android:id="@+id/textView" />
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/spinner_number_of_courses"
-            android:layout_weight="1"
-            android:entries="@array/numbers" >
-        </Spinner>
-        <!--<NumberPicker
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/numberPicker_number_of_courses"
-            android:layout_weight="1"
-            android:inputType="number" />-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linear_layout2"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/linear_layout1"
-        android:layout_alignParentStart="true">
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        tools:context="com.kca.www.studytimetablecalc.SetUpActivity">
 
-        <ScrollView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            cardview:cardElevation="5dp"
+            cardview:cardCornerRadius="2dp"
+            cardview:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/linear_layout_course"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/text_view3"
-                    android:gravity="center_horizontal"/>
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Number Of Courses"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textAlignment="gravity"
+                    android:background="@color/colorPrimaryDark" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black"
+                        android:text="Select number of courses"/>
                     <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:hint="@string/edit_text_view3"
+                        android:id="@+id/coursesET"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:id="@+id/editText" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:hint="@string/edit_text_view4"
-                        android:layout_weight="0"
-                        android:id="@+id/editText2" />
+                        android:background="@drawable/border1"
+                        android:cursorVisible="false"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="1"
+                        android:gravity="center"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
             </LinearLayout>
-        </ScrollView>
+        </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/linear_layout3"
-        android:layout_below="@+id/linear_layout2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/text_view2"
-            android:gravity="center_vertical"
-            android:layout_weight="9"
-            android:id="@+id/textView2" />
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/editText_number_of_readin_days"
-            android:inputType="number"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/linear_layout4"
-        android:layout_below="@+id/linear_layout3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
-
-        <ScrollView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            cardview:cardElevation="5dp"
+            cardview:cardCornerRadius="2dp"
+            cardview:cardUseCompatPadding="true">
+            <com.kca.www.studytimetablecalc.MaxHeightLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:maxHeightDp="250">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Courses And Priorities"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textAlignment="gravity"
+                    android:background="@color/colorPrimaryDark" />
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/course_priority_LL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <include layout="@layout/course_priority_view"/>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </com.kca.www.studytimetablecalc.MaxHeightLinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cardview:cardElevation="5dp"
+            cardview:cardCornerRadius="2dp"
+            cardview:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/text_view4"
-                    android:gravity="center_horizontal"/>
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Number Of Reading Days"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textAlignment="gravity"
+                    android:background="@color/colorPrimaryDark" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/linear_layout_day"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black"
+                        android:text="Select number of reading days"/>
                     <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:hint="@string/edit_text_view5"
-                        android:layout_weight="3"/>
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:hint="@string/edit_text_view6"
-                        android:layout_weight="0"/>
+                        android:id="@+id/daysET"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/border1"
+                        android:cursorVisible="false"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="1"
+                        android:gravity="center"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
             </LinearLayout>
-        </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cardview:cardElevation="5dp"
+            cardview:cardCornerRadius="2dp"
+            cardview:cardUseCompatPadding="true">
+            <com.kca.www.studytimetablecalc.MaxHeightLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:maxHeightDp="250">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Days And Reading Hours"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textAlignment="gravity"
+                    android:background="@color/colorPrimaryDark" />
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/day_hour_LL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <include layout="@layout/day_hour_view"/>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </com.kca.www.studytimetablecalc.MaxHeightLinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate"
+            android:background="@color/colorAccent"/>
 
     </LinearLayout>
+</ScrollView>
 
-</RelativeLayout>
