@@ -73,11 +73,10 @@
             cardview:cardElevation="5dp"
             cardview:cardCornerRadius="2dp"
             cardview:cardUseCompatPadding="true">
-            <com.kca.www.studytimetablecalc.MaxHeightLinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:maxHeightDp="250">
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -89,9 +88,9 @@
                     android:textStyle="bold"
                     android:textAlignment="gravity"
                     android:background="@color/colorPrimaryDark" />
-                <androidx.core.widget.NestedScrollView
+                <!--<androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent">-->
                     <LinearLayout
                         android:id="@+id/course_priority_LL"
                         android:layout_width="match_parent"
@@ -99,9 +98,9 @@
                         android:orientation="vertical">
                         <include layout="@layout/course_priority_view"/>
                     </LinearLayout>
-                </androidx.core.widget.NestedScrollView>
+                <!--</androidx.core.widget.NestedScrollView>-->
 
-            </com.kca.www.studytimetablecalc.MaxHeightLinearLayout>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -162,11 +161,10 @@
             cardview:cardElevation="5dp"
             cardview:cardCornerRadius="2dp"
             cardview:cardUseCompatPadding="true">
-            <com.kca.www.studytimetablecalc.MaxHeightLinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:maxHeightDp="250">
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -178,9 +176,9 @@
                     android:textStyle="bold"
                     android:textAlignment="gravity"
                     android:background="@color/colorPrimaryDark" />
-                <androidx.core.widget.NestedScrollView
+                <!--<androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content">-->
                     <LinearLayout
                         android:id="@+id/day_hour_LL"
                         android:layout_width="match_parent"
@@ -188,14 +186,57 @@
                         android:orientation="vertical">
                         <include layout="@layout/day_hour_view"/>
                     </LinearLayout>
-                </androidx.core.widget.NestedScrollView>
+                <!--</androidx.core.widget.NestedScrollView>-->
 
-            </com.kca.www.studytimetablecalc.MaxHeightLinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cardview:cardElevation="5dp"
+            cardview:cardCornerRadius="2dp"
+            cardview:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Upload Class Timetable"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textAlignment="gravity"
+                    android:background="@color/colorPrimaryDark" />
+                <Switch
+                    android:id="@+id/upload_SW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Upload"/>
+                <TextView
+                    android:id="@+id/upload_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/border1"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="--Select File--"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <Button
+            android:id="@+id/generate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="Generate"
             android:background="@color/colorAccent"/>
 
